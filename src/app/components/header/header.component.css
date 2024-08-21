@@ -1,0 +1,62 @@
+.navbar-brand{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-brand h4{
+  font-size: 24px;
+  background: linear-gradient(30deg, rgba(0, 0, 0, 0.842), #ca970b); /* Gradiente de amarelo para preto */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 0px;
+}
+
+.navbar-brand img{
+  width: 40px;
+}
+
+.navbar-nav button{
+  background-color: #ca970b;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-right: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  animation: pulse 1.2s infinite; /* Animação de pulsação */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1); /* Tamanho normal */
+  }
+  50% {
+    transform: scale(1.07); /* Aumenta ligeiramente o tamanho */
+  }
+}
+
+.navbar-nav button:hover {
+  background-color: #b08715; /* Alterar a cor ao passar o mouse */
+}
+
+.navbar-nav .nav-item:hover {
+  color: #ca970b; /* Cor de fundo ao passar o mouse */
+}
+
+.navbar-nav .nav-link {
+  color: inherit; /* Mantém a cor original do texto */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav button{
+    margin-top: 20px;
+  }
+}

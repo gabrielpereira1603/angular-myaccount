@@ -1,0 +1,45 @@
+<section class="testimones">
+  <h1>Depoimentos de Nossos Clientes</h1>
+
+  <p-carousel
+      [value]="testimonials"
+      [numVisible]="2"
+      [numScroll]="2"
+      [responsiveOptions]="responsiveOptions"
+      [circular]="true"
+      [showNavigators]="false"
+      [showIndicators]="false"
+      [autoplayInterval]="3000">
+
+    <ng-template pTemplate="item" let-testimonial>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+
+          <ng-container *ngIf="testimonial.reverse">
+            <div class="testimonial-author">
+              <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-author-img">
+              <div>
+                <p class="testimonial-author-name">{{ testimonial.name }}</p>
+                <p class="testimonial-author-role">{{ testimonial.role }}</p>
+              </div>
+            </div>
+          </ng-container>
+
+          <div class="testimonial-quote-icon">❝</div>
+          <h5 class="testimonial-title">{{ testimonial.title }}</h5>
+          <p class="testimonial-text">{{ testimonial.text }}</p>
+
+          <ng-container *ngIf="!testimonial.reverse">
+            <div class="testimonial-author">
+              <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-author-img">
+              <div>
+                <p class="testimonial-author-name">{{ testimonial.name }}</p>
+                <p class="testimonial-author-role">{{ testimonial.role }}</p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>
